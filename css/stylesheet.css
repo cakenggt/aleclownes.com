@@ -26,7 +26,6 @@ div {
 	background-color: rgb(40, 44, 52);
   padding-bottom: 56px;
   white-space: normal;
-  /*white-space: nowrap;-->*/
   width: calc(100% - 38px);
 }
 .storage {
@@ -40,6 +39,7 @@ div {
 	display: inline-block;
   box-shadow: inset 1px 0;
 	color: rgba(171, 178, 191, 0.55);
+  width: inherit;
 }
 .string {
 	color: #98c379;
