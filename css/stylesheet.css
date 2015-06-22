@@ -6,6 +6,13 @@ body {
 	background-color: rgb(40, 44, 52);
   margin-right: 0px;
 }
+table {
+  padding-bottom: 56px;
+  border-spacing: 0px;
+}
+td {
+  color: #ABB2BF;
+}
 div {
   display: block;
 }
@@ -18,16 +25,6 @@ div {
 	background-color: rgb(40, 44, 52);
 	padding-right: 10px;
 }
-.lines {
-	display: block;
-  position: absolute;
-  left: 38px;
-  top: 8px;
-	background-color: rgb(40, 44, 52);
-  padding-bottom: 56px;
-  white-space: normal;
-  width: calc(100% - 38px);
-}
 .storage {
   color: #c678dd;
 }
@@ -37,9 +34,9 @@ div {
 .indent {
 	padding-left: 20px;
 	display: inline-block;
-  box-shadow: inset 1px 0;
-	color: rgba(171, 178, 191, 0.55);
+  border-left: thin solid rgba(171, 178, 191, 0.55);
   width: inherit;
+  height: 110%;
 }
 .string {
 	color: #98c379;
@@ -62,9 +59,6 @@ a {
 }
 a:hover {
 	text-decoration: underline;
-}
-.lines .cursor-line {
-	background-color: rgba(153, 187, 255, 0.04);
 }
 .gutter .cursor-line {
 	color: rgba(171, 178, 191, 1);

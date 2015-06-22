@@ -8,31 +8,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        bootPage('index', index);
+      });
+    </script>
   </head>
   <body>
-    <div class="gutter">
-    </div>
-    <div class="lines">
-        <span class="storage">var</span><span class="text"> index = {</span><br>
-        <div class="indent">
-          <span class="text"><span class="key">name: </span><span class="string">'Alec Lownes'</span>,</span><br>
-          <span class="text"><span class="key">description: </span><span class="string">'I am a Software Developer at Performance Review Institute. I currently spend my free time writing Minecraft plugins, learning Swedish, and reading science fiction.'</span>,</span><br>
-          <span class="text"><span class="key">github: </span><span class="string">'https://github.com/cakenggt'</span>,</span><br>
-          <span class="text"><span class="key">bukkit: </span><span class="string">'http://dev.bukkit.org/profiles/cakenggt/'</span>,</span><br>
-          <span class="text"><span class="function-name">goToProjectsPage</span>: <span class="function">function</span>(){<br>
-            <div class="indent">
-              <span class="text"><span class="class">window</span>.<span class="constant">location</span> = <span class="string">'projects.html'</span>;</span>
-            </div><br>
-          },</span><br>
-          <span class="text"><span class="function-name">getResume</span>: <span class="function">function</span>(){<br>
-            <div class="indent">
-              <span class="text"><span class="class">window</span>.<span class="constant">location</span> = <span class="string">'AlecBLownesResume.pdf'</span>;</span>
-            </div><br>
-          }</span>
-        </div><br>
-        <span class="text">};</span><br>
-        <div class="cursor-line">&nbsp</div>
-    </div>
+    <table>
+      <tbody id="container">
+      </tbody>
+    </table>
     <div class="footer">
       <span class="footer-text fleft">index.html</span><span class="footer-text fleft" id="line-num"></span><span class="footer-text fright">UTF-8</span><span class="footer-text fright">JavaScript</span>
     </div>
