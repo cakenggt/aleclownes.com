@@ -4,7 +4,7 @@ function lineWrapper(){
 	var standard = 0;
 	for (var i = 0; i < breaks.length; i++){
 		var item = $(breaks[i]);
-		if (i == 0){
+		if (i === 0){
 			top = item.position().top;
 			continue;
 		}
