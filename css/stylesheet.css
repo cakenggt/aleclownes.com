@@ -12,6 +12,7 @@ table {
 }
 td {
   color: #ABB2BF;
+  padding: 0px;
 }
 div {
   display: block;
@@ -36,7 +37,6 @@ div {
 	display: inline-block;
   border-left: thin solid rgba(171, 178, 191, 0.55);
   width: inherit;
-  height: 110%;
 }
 .string {
 	color: #98c379;
