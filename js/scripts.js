@@ -195,7 +195,6 @@ function renderObject(table, obj, indents, differentLine){
 				var firstLineString = stringText.replace(stringRe1, '$1');
 				stringText = stringText.replace(stringRe1, '$2');
 				appended += '<span class="string">"' +  firstLineString + '"</span>+';
-				console.log(appended);
 				$('.indent:last').append(appended);
 				keyLength = 0;
 				intro = '<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart;
@@ -204,6 +203,12 @@ function renderObject(table, obj, indents, differentLine){
 				appended = '';
 			}
 			appended += '<span class="string">"' +  stringText + '"</span>';
+		}
+		else if (typeof obj == 'number'){
+			appended += '<span class="constant">' + obj + '</span>';
+		}
+		else {
+			appended += '<span>' + obj + '</span>';
 		}
 		appended += ',';
 		$('.indent:last').append(appended);
@@ -246,8 +251,15 @@ function bootPage(name, json){
 	urlLinker();
 }
 
+$(function(){
+	$('#resource').on('blur', function(){
+		$.getJSON($(this).text(), function(data){
+			bootPage('new', data);
+		});
+	});
+});
+
 //Analytics
-/*
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -255,4 +267,3 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-64371674-1', 'auto');
 ga('send', 'pageview');
-*/
