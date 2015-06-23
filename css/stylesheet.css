@@ -14,16 +14,13 @@ table {
 td {
   color: #ABB2BF;
   padding: 0px;
-  float: left;
 }
 div {
   display: block;
 }
 .gutter {
   text-align: right;
-  float: left;
 	width: 20px;
-	display: inline;
 	color: rgba(171, 178, 191, 0.6);
 	background-color: rgb(40, 44, 52);
 	padding-right: 10px;
