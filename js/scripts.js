@@ -121,6 +121,8 @@ function renderPage(name, json){
 	var lastRow = $('.indent:last');
 	lastRow.html(lastRow.html().substring(0, lastRow.html().length-1));
 	table.append('<tr><td class="gutter">' + ($('#container tr').length+1) + '</td><td>};</td></tr>');
+	table.append('<tr><td class="gutter">' + ($('#container tr').length+1) + '</td><td></td></tr>');
+	$('#line-num').text($('#container tr').length+":1");
 }
 
 function renderObject(table, obj, indents, differentLine){
@@ -135,11 +137,13 @@ function renderObject(table, obj, indents, differentLine){
 	var outro = differentLine ? '</td></tr>' : '</tr>';
 	if (obj instanceof Object){
 		if (obj instanceof Date){
+			//If date
 			$('.indent:last').append('new <span class="class">Date</span>(<span class="string">"'+
-			obj.getFullYear()+'-'+obj.getUTCMonth()+1+
-				'"</span>)');
+			obj.getFullYear()+'-'+('0'+(obj.getMonth()+1)).slice(-2)+
+				'"</span>),');
 		}
 		else if (obj instanceof Function){
+			//If function
 			var entire = obj.toString();
 			var body = entire.slice(entire.indexOf("{") + 1, entire.lastIndexOf("}"));
 			var partsOfFunction = $('.indent:last').html().split(':');
@@ -156,6 +160,7 @@ function renderObject(table, obj, indents, differentLine){
 			table.append('<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart + body + indentEnd);
 		}
 		else{
+			//general object
 			$('.indent:last').append('{');
 			var first = true;
 			for (var key in obj) {
@@ -180,7 +185,7 @@ function renderObject(table, obj, indents, differentLine){
 		//Not an object
 		var appended = '';
 		if (typeof obj == 'string'){
-			appended += '<span class="string">\'' +  obj + '\'</span>';
+			appended += '<span class="string">' +  JSON.stringify(obj) + '</span>';
 		}
 		appended += ','+indentEnd;
 		$('.indent:last').append(appended);

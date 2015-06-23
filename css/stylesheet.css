@@ -9,6 +9,7 @@ body {
 table {
   padding-bottom: 56px;
   border-spacing: 0px;
+  width: 100%;
 }
 td {
   color: #ABB2BF;
@@ -60,8 +61,11 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-.gutter .cursor-line {
-	color: rgba(171, 178, 191, 1);
+tr:last-child {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+tr:last-child .gutter {
+  color: rgba(171, 178, 191, 1);
 }
 .escape {
   color: #56b6c2;
