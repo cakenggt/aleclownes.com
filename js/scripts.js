@@ -111,6 +111,8 @@ var projects = {
 	}
 };
 
+var newJSON = {};
+
 function renderPage(name, json){
 	var table = $('#container');
 	table.empty();
@@ -178,9 +180,11 @@ function renderObject(table, obj, indents, differentLine){
 					first = false;
 			  }
 			}
-			//Remove the last comma
-			var lastIndent = $('.indent:last');
-			lastIndent.html(lastIndent.html().substring(0, lastIndent.html().length-1));
+			//Remove the last comma if it wasn't empty
+			if (!$.isEmptyObject(obj)){
+				var lastIndent = $('.indent:last');
+				lastIndent.html(lastIndent.html().substring(0, lastIndent.html().length-1));
+			}
 			//Generate indent level for previous level,
 			//except if that level is 0, then generate for 1
 			//because that means it is the next to last closing brace
@@ -197,10 +201,14 @@ function renderObject(table, obj, indents, differentLine){
 			stringText = stringText.substring(1, stringText.length-1);
 			var lastKey = $('.key:last').text();
 			var keyLength = lastKey.length;
-			while (stringText.indexOf('<a') == -1 && stringText.length + keyLength + 2 > 80){
+			while (!isUrl(stringText) && stringText.length + keyLength + 2 > 80){
 				var stringRe1 = new RegExp('(.{40,'+(80-keyLength)+'}\\s)?(.*)');
 				var firstLineString = stringText.replace(stringRe1, '$1');
 				stringText = stringText.replace(stringRe1, '$2');
+				if (!firstLineString){
+					//break if the string was too long to break, and thus would loop forever
+					break;
+				}
 				appended += '<span class="string">"' +  firstLineString + '"</span>+';
 				$('.indent:last').append(appended);
 				keyLength = 0;
@@ -211,7 +219,7 @@ function renderObject(table, obj, indents, differentLine){
 			}
 			appended += '<span class="string">"' +  stringText + '"</span>';
 		}
-		else if (typeof obj == 'number'){
+		else if (typeof obj == 'number' || typeof obj == 'boolean' || obj === null){
 			appended += '<span class="constant">' + obj + '</span>';
 		}
 		else {
@@ -252,7 +260,13 @@ function urlLinker(){
 	});
 }
 
+function isUrl(string){
+	var re = /(((http|ftp|https):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/g;
+	return re.exec(string) !== null;
+}
+
 function bootPage(name, json){
+	newJSON = json;
 	renderPage(name, json);
 	escapeGenerator();
 	urlLinker();
@@ -265,7 +279,7 @@ $(function(){
 	});
 	$('#resource').on('blur', function(){
 		$.getJSON($(this).text(), function(data){
-			bootPage('new', data);
+			bootPage('newJSON', data);
 		});
 	});
 	console.log('For an easter egg, double click on the resource span in the bottom '+
