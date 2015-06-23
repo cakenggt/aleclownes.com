@@ -185,9 +185,27 @@ function renderObject(table, obj, indents, differentLine){
 		//Not an object
 		var appended = '';
 		if (typeof obj == 'string'){
-			appended += '<span class="string">' +  JSON.stringify(obj) + '</span>';
+			//Is a string
+			var stringText = JSON.stringify(obj);
+			stringText = stringText.substring(1, stringText.length-1);
+			var lastKey = $('.key:last').text();
+			var keyLength = lastKey.length;
+			while (stringText.indexOf('<a') == -1 && stringText.length + keyLength + 2 > 80){
+				var stringRe1 = new RegExp('(.{40,'+(80-keyLength)+'}\\s)?(.*)');
+				var firstLineString = stringText.replace(stringRe1, '$1');
+				stringText = stringText.replace(stringRe1, '$2');
+				appended += '<span class="string">"' +  firstLineString + '"</span>+';
+				console.log(appended);
+				$('.indent:last').append(appended);
+				keyLength = 0;
+				intro = '<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart;
+				outro = '</td></tr>';
+				table.append(intro + indentEnd + outro);
+				appended = '';
+			}
+			appended += '<span class="string">"' +  stringText + '"</span>';
 		}
-		appended += ','+indentEnd;
+		appended += ',';
 		$('.indent:last').append(appended);
 	}
 }
@@ -200,34 +218,6 @@ function generateIndents(indents){
 		indentEnd += '</div>';
 	}
 	return [indentStart, indentEnd];
-}
-
-function stringBreaker(){
-	//break first considering key length
-	$('.text').each(function(){
-		if ($(this).children('.key').length && $(this).children('.string').length){
-			var keyLength = $($(this).children('.key')[0]).html().length;
-			var string = $($(this).children('.string')[0]);
-			var stringText = string.html();
-			if (stringText.indexOf('<a') == -1 && stringText.length > (80-keyLength)){
-				var re = new RegExp('(.{40,'+(80-keyLength)+'}\\s)?(.*)');
-				var subst = '$1';
-				var result = stringText.replace(re, subst);
-				string.html(result);
-				string.append('\'<span class="text">+<br></span>'+'<span class="string second">\''+stringText.replace(re, '$2')+'</span>');
-			}
-		}
-	});
-	//break second not regarding key length
-	$('.string.second').each(function(){
-		var innerHTML = $(this).html();
-		if (innerHTML.indexOf('<a') == -1 && innerHTML.length > 80){
-			var re = /(.{60,80}\s)+?/g;
-			var subst = '$1\'<span class="text">+<br></span>\'';
-			var result = innerHTML.replace(re, subst);
-			$(this).html(result);
-		}
-	});
 }
 
 function escapeGenerator(){
@@ -254,7 +244,6 @@ function bootPage(name, json){
 	renderPage(name, json);
 	escapeGenerator();
 	urlLinker();
-	stringBreaker();
 }
 
 //Analytics
