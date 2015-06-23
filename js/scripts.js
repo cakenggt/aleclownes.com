@@ -160,8 +160,15 @@ function renderObject(table, obj, indents, differentLine){
 			table.append('<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart + body + indentEnd);
 		}
 		else{
-			//general object
-			$('.indent:last').append('{');
+			//general object or array
+			var wrappers = '';
+			if (obj instanceof Array){
+				wrappers = '[]';
+			}
+			else{
+				wrappers = '{}';
+			}
+			$('.indent:last').append(wrappers[0]);
 			var first = true;
 			for (var key in obj) {
 			  if (obj.hasOwnProperty(key)) {
@@ -178,7 +185,7 @@ function renderObject(table, obj, indents, differentLine){
 			//except if that level is 0, then generate for 1
 			//because that means it is the next to last closing brace
 			var previousIndents = generateIndents(indents > 1 ? indents-1 : 1);
-			table.append('<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + previousIndents[0] + '},' + previousIndents[1]);
+			table.append('<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + previousIndents[0] + wrappers[1] + ',' + previousIndents[1]);
 		}
 	}
 	else{
