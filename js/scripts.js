@@ -252,11 +252,17 @@ function bootPage(name, json){
 }
 
 $(function(){
+	//Activates the easter egg
+	$('#resource').on('dblclick', function(){
+		$(this).attr('contenteditable', 'true');
+	});
 	$('#resource').on('blur', function(){
 		$.getJSON($(this).text(), function(data){
 			bootPage('new', data);
 		});
 	});
+	console.log('For an easter egg, double click on the resource span in the bottom '+
+	'left corner and enter in a url used to retrieve a JSON');
 });
 
 //Analytics
