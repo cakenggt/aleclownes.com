@@ -164,6 +164,7 @@ function bootPage(name, json){
 $(function(){
 	//Activates the easter egg
 	$('#resource').on('dblclick', function(){
+		ga('send', 'event', 'easter-egg', 'dblclick');
 		$(this).attr('contenteditable', 'true');
 	});
 	$('#resource').on('blur', function(){
