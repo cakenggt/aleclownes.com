@@ -9,23 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
-      var index = {
-        name: 'Alec Lownes',
-        description: 'I am a Software Developer at Performance Review Institute. I '+
-        'currently spend my free time writing Minecraft plugins, learning Swedish, and '+
-        'reading science fiction.',
-        github: 'https://github.com/cakenggt',
-        bukkit: 'http://dev.bukkit.org/profiles/cakenggt/',
-        goToProjectsPage: function(){
-          window.location = 'projects.html';
-        },
-          getResume: function(){
-        window.location = 'AlecBLownesResume.pdf';
-        }
-      };
-
       $(function(){
-        bootPage('index', index);
+        $.getJSON('https://raw.githubusercontent.com/cakenggt/aleclownes.com/github-get/index.json', function(data){
+    			bootPage('index', data);
+    		});
       });
     </script>
   </head>
