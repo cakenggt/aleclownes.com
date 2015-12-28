@@ -10,9 +10,16 @@
     <script src="js/scripts.js"></script>
     <script type="text/javascript">
       $(function(){
-        $.getJSON('https://raw.githubusercontent.com/cakenggt/aleclownes.com/gh-pages/projects.json', function(data){
+        $.getJSON('https://raw.githubusercontent.com/cakenggt/aleclownes.com/gh-pages/projects.json')
+        .done(function(data){
     			bootPage('projects', data);
-    		});
+    		})
+        .fail(function(){
+          $.getJSON('projects.json')
+          .done(function(data){
+      			bootPage('projects', data);
+      		});
+        });
       });
     </script>
   </head>
