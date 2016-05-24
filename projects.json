@@ -100,6 +100,16 @@
       "description": "Neurotic is a perceptron neural network implementation in JavaScript.",
       "created": "2015-12",
       "github": "https://github.com/cakenggt/Neurotic"
+    },
+    "trinity-sim": {
+      "description": "trinity-sim is a node library for running simulations of the Trinity Study.",
+      "created": "2016-02",
+      "github": "https://github.com/cakenggt/trinity-sim"
+    },
+    "dotSlashHack": {
+      "description": "dotSlashHack is a browser-based MMORPG where users can code their own spells using JavaScript",
+      "created": "2016-04",
+      "link": "https://dotslashhack.herokuapp.com"
     }
   },
   "android": {
