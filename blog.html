@@ -6,7 +6,7 @@ variable: blog
 {
   "posts": [
     {% for post in site.posts %}
-      "{{ site.baseurl }}{{ post.url }}",
+      "{{ post.url }}",
     {% endfor %}
   ],
   "indexPage": "index.html"
