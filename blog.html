@@ -1,0 +1,13 @@
+---
+layout: json_page
+title: blog.html
+variable: blog
+---
+{
+  "posts": [
+    {% for post in site.posts %}
+      "{{ post.url }}",
+    {% endfor %}
+  ],
+  "indexPage": "index.html"
+}

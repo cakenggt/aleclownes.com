@@ -1,4 +1,4 @@
-var newJSON = {};
+var urlRegex = /(((http|ftp|https):\/\/)?[\w-\/]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/g;
 
 function renderPage(name, json){
 	var table = $('#container');
@@ -142,20 +142,17 @@ function escapeGenerator(){
 function urlLinker(){
 	$('.string').each(function(){
 		var innerHTML = $(this).html();
-		var re = /(((http|ftp|https):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/g;
 		var subst = '<a href="$1">$1</a>';
-		var result = innerHTML.replace(re, subst);
+		var result = innerHTML.replace(urlRegex, subst);
 		$(this).html(result);
 	});
 }
 
 function isUrl(string){
-	var re = /(((http|ftp|https):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?)/g;
-	return re.exec(string) !== null;
+	return urlRegex.exec(string) !== null;
 }
 
 function bootPage(name, json){
-	newJSON = json;
 	renderPage(name, json);
 	escapeGenerator();
 	urlLinker();

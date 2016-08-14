@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <link rel="shortcut icon" href="images/alec.jpg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        bootPage('{{ page.variable }}', {{ content }});
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tbody id="container">
+      </tbody>
+    </table>
+    <div class="footer">
+      <span class="footer-text fleft" id="resource">{{ page.title }}</span><span class="footer-text fleft" id="line-num"></span><span class="footer-text fright">UTF-8</span><span class="footer-text fright">JavaScript</span>
+    </div>
+  </body>
+</html>

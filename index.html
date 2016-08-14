@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <link rel="shortcut icon" href="images/alec.jpg">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Alec Lownes</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script type="text/javascript">
-      $(function(){
-        $.getJSON('https://raw.githubusercontent.com/cakenggt/aleclownes.com/gh-pages/index.json')
-        .done(function(data){
-    			bootPage('index', data);
-    		})
-        .fail(function(){
-          $.getJSON('index.json')
-          .done(function(data){
-      			bootPage('index', data);
-      		});
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <table>
-      <tbody id="container">
-      </tbody>
-    </table>
-    <div class="footer">
-      <span class="footer-text fleft" id="resource">index.html</span><span class="footer-text fleft" id="line-num"></span><span class="footer-text fright">UTF-8</span><span class="footer-text fright">JavaScript</span>
-    </div>
-  </body>
-</html>
+---
+layout: json_page
+title: index.html
+variable: index
+---
+{
+  "name": "Alec Lownes",
+  "description": "I am a Software Engineer at Performance Review Institute. I currently spend my free time writing various games, learning Swedish, and reading science fiction.",
+  "github": "https://github.com/cakenggt",
+  "bukkit": "http://dev.bukkit.org/profiles/cakenggt/",
+  "projectsPage": "projects.html",
+  "devBlog": "blog.html",
+  "resume": "AlecBLownesResume.pdf"
+}
