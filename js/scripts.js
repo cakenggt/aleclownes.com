@@ -63,8 +63,16 @@ function renderObject(table, obj, indents, differentLine){
 			var first = true;
 			for (var key in obj) {
 			  if (obj.hasOwnProperty(key)) {
-					table.append('<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart +
-					'<span class="key">' + key + ':&nbsp' + '</span>' + indentEnd);
+					var keyStr;
+					if (obj instanceof Array){
+						keyStr = '<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart +
+						indentEnd;
+					}
+					else{
+						keyStr = '<tr>'+ '<td class="gutter">' + ($('#container tr').length+1) + '</td>' + '<td>' + indentStart +
+						'<span class="key">' + key + ':&nbsp' + '</span>' + indentEnd;
+					}
+					table.append(keyStr);
 					renderObject(table, obj[key], indents+1, !first);
 					first = false;
 			  }
