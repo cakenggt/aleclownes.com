@@ -1,5 +1,5 @@
 # Site settings
-baseurl: "/aleclownes.com" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
