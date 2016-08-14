@@ -5,11 +5,15 @@
     <link rel="shortcut icon" href="images/alec.jpg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/less" media="screen" href="css/markdown.less">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/markdown.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/syntax.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
   </head>
   <body>
     {{ content }}
   </body>
+  <footer>
+    <a href="{{ site.baseurl }}/blog.html">Back to blog.html</a>
+  </footer>
 </html>
