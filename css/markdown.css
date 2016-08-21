@@ -87,6 +87,10 @@ td {
 }
 code {
   color: #ffffff;
+  border-color: #181a1f;
+  background-color: #383d49;
+  background-clip: padding-box;
+  border-radius: 3px;
 }
 pre.highlight {
   margin: 1.5em 0;
