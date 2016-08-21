@@ -2,6 +2,7 @@ body {
   font-size: 1.25em;
   color: #c8ccd5;
   background-color: #2f333d;
+  margin: 8px;
 }
 h1,
 h2,
@@ -86,9 +87,8 @@ td {
 }
 code {
   color: #ffffff;
-  background-color: #414654;
 }
-atom-text-editor {
+pre.highlight {
   margin: 1.5em 0;
   padding: 1em;
   font-size: .92em;

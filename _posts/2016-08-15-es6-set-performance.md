@@ -74,7 +74,7 @@ It turns out that the Set implementation in Chrome's V8 JavaScript Engine is ver
 
 I have included the test below using the following Set implementations, compared to the native ES6 Set implementation.
 
-{% highlight javascript linenos %}
+```js
 class NaiveSet {
   constructor(){
     this.map = {};
@@ -116,7 +116,7 @@ class BitEnumSet {
     return (this.num & 1<<el) != 0;
   }
 }
-{% endhighlight %}
+```
 
 <button id="run-bit-enum-set-comp">Run!</button>
 <pre id="results-bit-enum-set-comp">
