@@ -24,13 +24,13 @@ I made a fundamental decision early on away from procedurally generated map cont
 
 I designed the game maps using the [Tiled] editor, and it was just a pleasure. Each square in the game had a foreground tile (optional), a background tile, and a difficulty level which was represented as a separate layer in the map. I ended up really enjoying the decision to have the tiles determine their difficulty through a separate map tile, as I was able to have a difficulty overlay of the map at any time while designing new sections.
 
-![Tiled difficulty display](/images/alec.jpg)
+![Tiled difficulty display](/images/tiled-difficulty.png)
 
 Additionally, the [Tiled] editor lets you add extra data to everything, which allowed me to not only add data on whether a player could walk through a tree to a tree tile, but to add offsetX and offsetY data to entire map sections to determine where they were in relation to the origin in the world.
 
 Speaking of that, I also made a decision to break up my maps into sections, each of which would have data saying where to put it specifically in the global map. This was to make collaboration in a team more efficient and less prone to merge conflicts. Along those lines as well, I would have my map creation script only read the map data in as a json, freeing me from a tool if [Tiled] ever decided to go proprietary.
 
-Write about deciding to go with redis
+For the storage of these maps, I decided early on that I did not want to load the entire map into memory, since it could get very big, which prevented me from loading from a flat JSON. I ended up deciding to store the map as entries in a [Redis] db due to it's speed of retrieval. Whenever a map change needed to be put in, I had to run a script to clear out the old entries from the db and replace them with the new entries generated from Tiled.
 
 ## Front end
 
@@ -45,3 +45,4 @@ Write about the network issues and how it was exacerbated by js's single thread.
 [Sequelize]: http://docs.sequelizejs.com/
 [NodeJs]: https://nodejs.org
 [Browserify]: http://browserify.org/
+[Redis]: http://redis.io/
