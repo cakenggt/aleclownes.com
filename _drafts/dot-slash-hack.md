@@ -28,17 +28,21 @@ I designed the game maps using the [Tiled] editor, and it was just a pleasure. E
 
 Additionally, the [Tiled] editor lets you add extra data to everything, which allowed me to not only add data on whether a player could walk through a tree to a tree tile, but to add offsetX and offsetY data to entire map sections to determine where they were in relation to the origin in the world.
 
-Speaking of that, I also made a decision to break up my maps into sections, each of which would have data saying where to put it specifically in the global map. This was to make collaboration in a team more efficient and less prone to merge conflicts. Along those lines as well, I would have my map creation script only read the map data in as a json, freeing me from a tool if [Tiled] ever decided to go proprietary.
+Speaking of that, I also made a decision to break up my maps into sections, each of which would have data saying where to put it specifically in the global map. This was to make collaboration in a team more efficient and less prone to merge conflicts. Along those lines as well, I would have my map creation script only read the map data in as a JSON, freeing me from a tool if [Tiled] ever decided to go proprietary.
 
 For the storage of these maps, I decided early on that I did not want to load the entire map into memory, since it could get very big, which prevented me from loading from a flat JSON. I ended up deciding to store the map as entries in a [Redis] db due to it's speed of retrieval. Whenever a map change needed to be put in, I had to run a script to clear out the old entries from the db and replace them with the new entries generated from Tiled.
 
 ## Front end
 
-Write about separation of code between front-end and back-end, and how it wasn't separated in SpellScript.
+In the past I wrote a plugin called [SpellScript] for Bukkit, the Minecraft server modification platform. It allowed you to code up spells in JavaScript, and was the inspiration for this server. However, there was a huge security flaw with the plugin: the scripts written by players were executed on the server. While I tried to sandbox the environment as best I could, you can never be sure there wasn't some way of breaking out of the sandbox and hurting the server's files.
+
+DotSlashHack was designed from the ground up to address this vulnerability. There is an airgap between the scripts that the players write, and the code that is run on the server: nothing written by a user will ever be evaluated on server hardware. The way this was accomplished was by writing an entire api for the spells to access through a WebSocket connection (I used [socket.io]). Everything the spells did had to be requested through this api, from moving to damaging other entities. The logic for every request was double-checked on the server to make sure it made sense. Additionally, a rate-limiter was implemented for most spell and user actions, so a user couldn't hack their client to send movement or damage requests at a much greater rate than normal.
 
 ## Difficulties
 
-Write about the network issues and how it was exacerbated by js's single thread.
+I ran into a difficulty fairly early on with the networking of the game. JavaScript, as you may know, uses a single thread to execute all code. This wasn't a problem initially, because the server code has relatively little going on, and doesn't take all that much time to run.
+
+However, the way I had it initially set up, a separate socket emission was made for each of the entities visible to the player, to give the user updated data on each entity. What I didn't know at the time was that network connections are very expensive to start, and starting 30+ connections 20 times a second for each player started slowing down the server. I ended up solving this by bundling all of the data that a user required about the entities around it into a single JSON object, and then sending that all at once to the user.
 
 [PostgreSQL]: https://www.postgresql.org/
 [Tiled]: http://www.mapeditor.org/
@@ -46,3 +50,5 @@ Write about the network issues and how it was exacerbated by js's single thread.
 [NodeJs]: https://nodejs.org
 [Browserify]: http://browserify.org/
 [Redis]: http://redis.io/
+[SpellScript]: https://github.com/cakenggt/SpellScript
+[socket.io]: http://socket.io/
