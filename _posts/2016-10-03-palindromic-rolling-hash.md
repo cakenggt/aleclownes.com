@@ -2,6 +2,8 @@
 layout: md_page
 title: Palindromic Rolling Hash
 ---
+# Palindromic Rolling Hash
+
 In the world of interview algorithms, interviewees often come across a problem similar to the following:
 
 `Given a string, find the longest palindrome contained in that string`
