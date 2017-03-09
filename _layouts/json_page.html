@@ -7,21 +7,16 @@
     <title>{{ page.title }}</title>
     {% feed_meta %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/stylesheet.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/crt.css">
     <script src="/js/scripts.js"></script>
     <script type="text/javascript">
-      $(function(){
-        bootPage('{{ page.variable }}', {{ content }});
-      });
+      window.onload = function(){
+        renderPage('{{ page.variable }}', `{{ content }}`);
+      };
+      window.onclick = onBodyClick;
     </script>
   </head>
-  <body>
-    <table>
-      <tbody id="container">
-      </tbody>
-    </table>
-    <div class="footer">
-      <span class="footer-text fleft" id="resource">{{ page.title }}</span><span class="footer-text fleft" id="line-num"></span><span class="footer-text fright">UTF-8</span><span class="footer-text fright">JavaScript</span>
-    </div>
+  <body class="crt">
+    <div id="container"></div>
   </body>
 </html>
