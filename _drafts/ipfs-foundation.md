@@ -17,11 +17,13 @@ IPNS(Inter-Planetary Name Service) is the system that IPFS uses to allow you to 
 
 # The Conundrum of Dynamism in IPFS
 
-The idea of IPFS is that it doesn't rely on a server to serve a specific file, instead relying on all clients to serve the file like a torrent network. However, since these are all static files, we are limited in what can be done in terms of data storage. In order to create a web service that takes in new data and stores it, we must use a hybrid approach of both IPFS and web technologies. Additionally, the dynamic naming provided by IPNS gives us a way to progressively release newer versions of an app.
+The idea of IPFS is that it doesn't rely on a server to serve a specific file, instead relying on all clients to serve the file like a torrent network. However, since these are all static files, we are limited in what can be done in terms of data storage. In order to create a web service that takes in new data and stores it, we must use a hybrid approach of both IPFS and a hosted web server. Additionally, the dynamic naming provided by IPNS gives us a way to progressively release newer versions of an app.
 
 # How it works
 
 The Foundation (original name) is a React-Redux SPA meant to operate like well-known torrent websites to allow users to associate meta-information (title, type, description, etc.) with IPFS file hashes. IPFS directories, when accessed in the browser, will act like simple web directories, and will always load and display `index.html` if it exists. All other files required for the operation of the SPA were accessed through relative paths. Routing in React needed to use hash history since there was no web server which would route all paths to the same file.
+
+![The Index](/images/the-index.png)
 
 ## Backend
 
@@ -39,7 +41,7 @@ When the app was first loaded, it would see if it's url began with `ipns`, and i
 
 The app tries to load data from two different locations. First, the app will try to access the backend's API and get a JSON dump of the data. If that is unsuccessful, it will load the relative `dump.json` url. This json file is included in the app folder and represents the result of asking the backend server for its `dump.json` at compile time. Running the script `scripts/publish-to-ipfs.js` would download this new `dump.json` file and upload everything to IPFS. This was done so that if the backend server ever went down, there would still be data backed up in the app.
 
-The structure of the folder that was linked in IPNS is as follows:
+The structure of the folder that was linked in IPNS and published to IPFS is as follows:
 ```
 /
   index.html
@@ -51,3 +53,7 @@ The structure of the folder that was linked in IPNS is as follows:
   js
     bundle.js
 ```
+
+# Redundancy
+
+Instead of an IPNS link, an IPFS link to the most current version of the app was distributed. In the case that the web server was offline, the IPFS link would ask the user to update to the IPNS link, and then the app would load the most recent `dump.json` from IPFS, thus having a functioning database. If the IPNS hadn't been updated recently enough and was expired, the app would still get a functioning database dump from the web server if it was still online, or the most up-to-date `dump.json` that it had stored. By distributing an IPFS link instead of an IPNS link I guaranteed the app would load while exposing users to the risk of getting a less up-to-date version of the `dump.json` in the case that the api server was down.
