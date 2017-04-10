@@ -14,7 +14,7 @@ Before we start, you should read some of the [official Elm guide](https://guide.
 
 An Elm app can be started with a farily minimal boilerplate which succinctly shows all of the working parts of the app.
 
-```elm
+```
 import Html exposing (..)
 
 
