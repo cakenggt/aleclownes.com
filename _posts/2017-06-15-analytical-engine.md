@@ -1,6 +1,6 @@
 ---
 layout: md_page
-title: Coding with Ada: Programming Babbage's Analytical Engine
+title: ! 'Coding with Ada: Programming Babbage''s Analytical Engine'
 ---
 # What is The Analytical Engine
 
