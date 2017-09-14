@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: Decentralized IPFS Indexing
 ---
 # Decentralized IPFS Indexing

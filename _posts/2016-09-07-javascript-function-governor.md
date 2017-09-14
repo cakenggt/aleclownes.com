@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: JavaScript Function Governor
 ---
 # JavaScript Function Governor

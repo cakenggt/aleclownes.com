@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: ! 'Coding with Ada: Programming Babbage''s Analytical Engine'
 ---
 # What is The Analytical Engine
@@ -15,8 +15,6 @@ The Difference Engine, itself a fairly impressive and complicated piece of gearw
 # Description of the Engine
 
 ![Stylized View of the Analytical Engine](/images/analyticalengine.jpg)
-
-Stylized view of the Analytical engine provided by [Sydney Padua](http://sydneypadua.com/2dgoggles/the-marvellous-analytical-engine-how-it-works/)
 
 The engine would have been a behemoth that required its' own building to house. In the 1800s it would have had more memory than an IBM 1401, completely represented by geared mechanisms. There are several sections important to this post, detailed below.
 

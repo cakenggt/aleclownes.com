@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: CSS CRT
 ---
 <link rel="stylesheet" type="text/css" href="/css/crt.css">

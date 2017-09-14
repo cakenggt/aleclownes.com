@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: Dynamic Archived Web Services in IPFS
 ---
 # Dynamic Archived Web Services in IPFS

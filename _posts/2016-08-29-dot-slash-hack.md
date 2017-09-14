@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: Dot Slash Hack
 ---
 # Dot Slash Hack

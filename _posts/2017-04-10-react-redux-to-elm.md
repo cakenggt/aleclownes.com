@@ -1,5 +1,5 @@
 ---
-layout: md_page
+layout: plain_page
 title: Moving from React-Redux to Elm
 ---
 # Moving from React-Redux to Elm
