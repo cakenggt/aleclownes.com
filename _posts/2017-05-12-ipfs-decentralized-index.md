@@ -2,8 +2,6 @@
 layout: plain_page
 title: Decentralized IPFS Indexing
 ---
-# Decentralized IPFS Indexing
-
 ## Problem
 
 [IPFS](https://ipfs.io/) is an excellent file distribution platform. However, as files are identified by only their hashes, it is difficult to discover the files you want except through pre-compiled lists online. [The Index](https://www.reddit.com/r/ipfs/comments/67brhw/the_index_online_the_index_as_an_online_app_again/) was my attempt to create such an index of IPFS files using no centralized service at all, to enable maximum robustness.

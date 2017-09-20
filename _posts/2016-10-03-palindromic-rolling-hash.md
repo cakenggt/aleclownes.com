@@ -2,8 +2,6 @@
 layout: plain_page
 title: Palindromic Rolling Hash
 ---
-# Palindromic Rolling Hash
-
 In the world of interview algorithms, interviewees often come across a problem similar to the following:
 
 `Given a string, find the longest palindrome contained in that string`
@@ -21,8 +19,8 @@ Rolling Hash 2 contents: `tek`
 Once you have this object, and the internal logic which allows you to add a character to the overall length of the Palindromic Rolling Hash, or subtract it, and have the internal hashes recompute in O(1) time, the following steps can be used to find the largest palindrome. I will start partway into the process, as there are some weirdnesses at the beginning and end of the string that require extra logic.
 
 1. Check to see if the selection is currently a palindrome
-2. If it is, add the next character and the preceeding character to the rolling hash and go to step 1.
-3. If it is not, add the next character to the rolling hash. Check to see if this is a palindrome. If it is, go to step 2. If not, remove the first character from the rolling hash, thus moving it's center and keeping it the same length. Go to step 1.
+2. If it is, add the next character and the preceeding character to the rolling hash and go to step&nbsp;1.
+3. If it is not, add the next character to the rolling hash. Check to see if this is a palindrome. If it is, go to step&nbsp;2. If not, remove the first character from the rolling hash, thus moving it's center and keeping it the same length. Go to step&nbsp;1.
 
 This solution relies on the fact that we are only looking for the largest palindrome, so we can skip all palindromes smaller than the largest seen one.
 

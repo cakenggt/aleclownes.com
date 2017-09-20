@@ -1,6 +1,6 @@
 ---
 layout: plain_page
-title: ES6 Set Performance
+title: ES6 Set Performance in Chrome's V8 JavaScript Engine
 ---
 <script>
 var NaiveSet = function(){
@@ -65,8 +65,6 @@ $(function(){
   });
 });
 </script>
-
-# ES6 Set Performance in Chrome's V8 JavaScript Engine
 
 One of the nice things that came with ES6 were native Sets, provided so that developers didn't have to keep importing or rolling their own custom Set polyfills. As I was writing a post about the advantages of using an EnumSet over a generic Set, I coded up and included some performance examples which yielded some very surprising results.
 

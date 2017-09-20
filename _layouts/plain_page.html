@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
     <link rel="shortcut icon" href="/images/alec.jpg">
@@ -8,11 +8,12 @@
     {% feed_meta %}
     <link rel="stylesheet" type="text/css" media="screen" href="/css/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/syntax.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/js/ga.js"></script>
   </head>
   <body>
+    <h1>{{ page.title }}</h1>
     {{ content }}
   </body>
 </html>

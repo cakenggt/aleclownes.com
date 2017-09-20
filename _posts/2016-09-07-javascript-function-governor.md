@@ -2,8 +2,6 @@
 layout: plain_page
 title: JavaScript Function Governor
 ---
-# JavaScript Function Governor
-
 The single-threaded nature of JavaScript often takes the language out of the running for the types of computations that take a significant amount of time. While there are workarounds for both the browser and NodeJs to run scripts asynchronously, ([Web Workers](http://www.w3schools.com/html/html5_webworkers.asp) for the browser), these can prove overkill for some problems.
 
 For example, if you wanted your reactive website to display a list of widget names as the user typed a name into a search box, you would need to construct some sort of fast data structure out of a pre-defined list of names. Depending on how large this list of names is, it could take a few seconds to finish constructing the data structure. You could give this list to a web worker and have it post back with the complete data structure, but I think there is a simpler solution for this problem.

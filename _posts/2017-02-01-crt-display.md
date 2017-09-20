@@ -1,17 +1,16 @@
 ---
 layout: plain_page
-title: CSS CRT
+title: Using CSS to create a CRT
 ---
 <link rel="stylesheet" type="text/css" href="/css/crt.css">
-# Using CSS to create a CRT
 
 Many of us remember televisions from our childhoods as these flickering glass behemoths. These were CRT TVs and they had a very different look to them than our LCD screens do today. I have attempted to assemble a set of CSS effects to replicate this look mainly by adding three things: [screen-door effect](https://en.wikipedia.org/wiki/Screen-door_effect), flicker, and color separation. The color separation idea originally came from the [hyperpunk theme](https://github.com/staltz/hyperpunk) by Andre Staltz for the hyper terminal. The scanlines and flicker effects came from the [CSS CRT screen effect](https://codepen.io/lbebber/pen/XJRdrV/) codepen by Lucas Bebber.
 
 I will break down each of the effects separately below to show how they interact to form the finished product.
 
-# Effects
+## Effects
 
-## Screen-Door Effect
+### Screen-Door Effect
 
 The CRT TVs of old had rather large pixels with rather noticeable borders. This, combined with the actual scanline effect from the horizontally scrolling ray, ended up making the TV look very pixely. The CSS for this is broken up into two separate parts: a vertical line and a horizontal line. These are repeated very closely, on top of the image, to make this effect. Below you can see some examples of the two parts and how they come together.
 
@@ -66,7 +65,7 @@ The vertical and horizontal lines are made up using linear gradients, and the re
 }
 ```
 
-## Flicker
+### Flicker
 
 CRT TVs had a pretty noticeable flickering, and Lucas Bebber has recreated this with an animation, eliminating the need for JS to control the repeat. Using the `@keyframes` css rule, we can specify what happens on each percentage of an animation, and he has used this to vary the opacity of the flicker filter randomly.
 
@@ -176,7 +175,7 @@ Another overlay is created, but this time it is on the `::after` attribute, and 
 }
 ```
 
-## Color Separation
+### Color Separation
 
 The color separation effect isn't really a CRT TV-specific effect, but one which people like to associate with CRT TVs. I'm not sure if this really ever happened with CRT TVs, but it does give a cool effect, so we'll use it anyway.
 
@@ -276,7 +275,7 @@ As we can see, the text shadow effect uses keyframes and a looping animation to 
 }
 ```
 
-# Conclusion
+## Conclusion
 
 I have assembled all of these effects in my [hyperatompunk](https://github.com/cakenggt/hyperatompunk) package for the hyper terminal, which looks pretty cool if I do say so myself.
 
