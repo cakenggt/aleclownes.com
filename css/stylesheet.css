@@ -41,6 +41,10 @@ h1 {
 h2 {
   font-size: 26px;
 }
+:not(h1)+h2 {
+  border-top: 1px black solid;
+  padding: 0.3em 0;
+}
 h3 {
   font-size: 23px;
 }
