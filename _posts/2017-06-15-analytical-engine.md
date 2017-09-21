@@ -8,9 +8,9 @@ In 1837, Charles Babbage designed a machine. Like any machine of the Victorian e
 
 If we look back to 1833, Babbage built a prototype of another machine, the Difference Engine, and liked to show it off to people of high society at his parties. However, this was a completely different beast, as it was only good for tabulating the soluion to equations in the form `a + bx + cx^2 + ... + hx^7`. As Ada Lovelace so eloquently states:
 
-<p class="blockquote">
+<blockquote>
 The Analytical Engine, on the contrary, is not merely adapted for tabulating the results of one particular function and of no other, but for developing and tabulating any function whatever. In fact the engine may be described as being the material expression of any indefinite function of any degree of generality and complexity&#8230;
-</p>
+</blockquote>
 
 The Difference Engine, itself a fairly impressive and complicated piece of gearwork, was nothing compared to the lofty dreams of the Analytical Engine, which had many of the concepts we now recognize as essential to computation, but made of brass. The construction of the Analytical Engine, besides a small proof of concept of a single part, was never even attempted. However, we have notes taken at his lectures and correspondence between him and Ada to tell us how the engine would have worked.
 
@@ -28,9 +28,9 @@ The Mill is the CPU of the engine, performing the additions and subtractions nec
 
 The Store is the memory of the engine, and it consisted of 1000 columns of 50 gears with the numbers 0 through 9. The amount of data which can be stored in the store is astounding, and as Jon Walker states:
 
-<p class="blockquote">
+<blockquote>
 &#8230;one wonders what kind of problem Babbage had in mind which would have required 1000 intermediate values to solve.
-</p>
+</blockquote>
 
 One can calculate the total memory of the store using the following formula.
 
