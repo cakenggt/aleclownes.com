@@ -1,9 +1,9 @@
 body {
-  width: 70ch;
+  max-width: 800px;
   font-size: 21px;
   margin: 0 auto;
   font-family: 'Droid Serif', serif;
-  padding: 80px 80px;
+  padding: 4em 2em;
   color: #313131;
   line-height: 1.4;
 }
@@ -37,17 +37,17 @@ h1, h2, h3 {
 }
 h1 {
   font-weight: bold;
-  font-size: 23.5px;
+  font-size: 112%;
 }
 h2 {
-  font-size: 26px;
+  font-size: 123%;
 }
 :not(h1)+h2 {
   border-top: 1px black solid;
   padding-top: 0.5em;
 }
 h3 {
-  font-size: 23px;
+  font-size: 109%;
 }
 p {
   text-indent: 3ch;
@@ -88,11 +88,35 @@ ul, ol {
   -webkit-padding-start: 0px;
 }
 li {
-  padding: 4px 0;
+  padding: 0.3em 0;
 }
 blockquote {
   text-indent: 3ch;
-  font-size: 19px;
+  font-size: 90%;
   line-height: 1.2;
   margin: 1em 2em;
+}
+@media (max-width: 870px) {
+  body {
+    font-size: 20px;
+  }
+  a {
+    white-space: normal;
+  }
+}
+@media (max-width: 830px) {
+  body {
+    font-size: 19px;
+  }
+}
+@media (max-width: 790px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    padding: 2em;
+    font-size: 17px;
+  }
 }
