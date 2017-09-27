@@ -2,7 +2,8 @@ body {
   max-width: 800px;
   font-size: 21px;
   margin: 0 auto;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
   padding: 4em 2em;
   color: #313131;
   line-height: 1.4;
@@ -11,7 +12,8 @@ a {
   position: relative;
   text-decoration: none;
   color: #313131;
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 400;
   white-space: nowrap;
 }
 a:before {
@@ -30,13 +32,12 @@ a:hover:before {
   width:100%;
 }
 h1, h2, h3 {
-  font-family: 'Droid Sans', sans-serif;
   text-transform: capitalize;
-  font-weight: normal;
+  font-weight: 400;
   margin: 0.5em 0;
 }
 h1 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 112%;
 }
 h2 {
