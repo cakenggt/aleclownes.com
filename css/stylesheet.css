@@ -85,8 +85,9 @@ td:last-child {
   border-right: none;
 }
 img {
+  display: block;
+  padding: 10px 0;
   width:100%;
-  margin-left: -3ch; /*To get rid of the p tag text-indent*/
 }
 ul, ol {
   margin: 0.5em 0;
@@ -106,6 +107,10 @@ blockquote {
   font-size: 90%;
   line-height: 1.2;
   margin: 1em 2em;
+}
+iframe {
+  margin: 0 auto;
+  padding: 10px 0;
 }
 @media (max-width: 870px) {
   body {
