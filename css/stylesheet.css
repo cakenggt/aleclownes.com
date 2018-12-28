@@ -109,6 +109,7 @@ blockquote {
   margin: 1em 2em;
 }
 iframe {
+  display: block;
   margin: 0 auto;
   padding: 10px 0;
 }
