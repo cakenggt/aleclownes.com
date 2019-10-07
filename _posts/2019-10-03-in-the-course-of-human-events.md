@@ -2,8 +2,6 @@
 layout: plain_page
 title: In The Course Of Human Events
 ---
-# In The Course Of Human Events
-
 I made a game, you can play it by clicking the cover below.
 
 [![Cover](/images/in-the-course-of-human-events.png)](/projects/inthecourseofhumanevents.html)
