@@ -1,4 +1,4 @@
-# Prospect: Ties that Bind
+# Prospect: The Importance of Connection
 In the 2018 science fiction film, Prospect, a father and daughter travel to a remote forest moon in search of the precious resource, orelac. Like their 19th century Californian counterparts, the work for these prospectors is dangerous and unregulated, no place for a child. But nevertheless, the father, Damon, brings everything he has to the job site, including his daughter, Cee. Damon's ambition is boundless, and he will sacrifice their safety to make his way up in the world.
 *Clip of the landing failing*
 *Clip of Cee begging him to go back to the ship*
@@ -7,7 +7,7 @@ Cee and Damon have suffered a vital loss to their family structure, the death of
 # Orelac
 *Last prospectors missed something*
 The gem, orelac, which our crew is after, suffers from a case of split personality. One would be forgiven if, up until the point of first contact, you thought it was an inorganic substance, a gem to be mined. But once the extraction begins, the viewer can immediately see that there is something very organic, very living about the shell of the orelac. It's shape, the sounds it makes, it is very similar to a pupa of some sort. Throughout the extraction process, however, we can see the prospector's break from reality, as Damon continues to refer to it in the inorganic fashion. It is only when Damon refers to the legendary "Queen's lair" that we see the first acknowledgement of an organic nature to the gem. Damon's area of expertise is in the extraction of value from this defenseless organism, a skill he puts to use on his own daughter as well.
-*Audio: I could hold you in the palm of my hand, red and angry*
+*Audio: I could hold you in the palm of my hand, red and furious*
 *Video: Him holding the pupa*
 
 # Umbilical Cords
@@ -42,31 +42,3 @@ Cee leaves Ezra, only to gather medical supplies for his treatment. It is at thi
 
 # Ending
 The film ends as we see Ezra and Cee approaching the transport in orbit. Cee smiles, but why? Her shipmate is the murderer of her father, but as we have seen throughout the movie, she had several opportunities to either kill him, or leave him to die, but never did. In actuality, upon leaving the forest moon, she has gained a more meaningful relationship with Ezra than she had with her father, one based on mutual respect and regard. We see a reversal, in these final scenes, of her desperate plea to her father of leaving the moon after finding their first gem. Here, Cee and Ezra escape in the rocket with no gems. They have stolen nothing from the moon, but they are alive, and that's good enough for both of them.
-
-# Outline
-1. Parenting
-    1. Can't take care of either of them.
-    1. Describes her just like the pupas.
-    1. Extracts value from her like the pupas.
-    1. Climb inside because of her small size to get the eggs.
-    1. Religious dad
-1. Umbilical Cord Imagery
-    1. Do you want to cut it?
-    1. Pupas and gems
-    1. Food tubes.
-    1. Shared air
-1. Nature
-    1. Dust
-    1. More important to seal the suit than it is to treat the wound.
-    1. Religious people vs people of the forest from Nausicaa
-        1. The difference between living with nature and living in spite of nature. The Juice cleanses the dust.
-        1. Additionally, the religious people have gems, which means that they also prospect.
-        1. To take Cee as his wife, when he has a son who is Cee's age, is against the natural order, and shows a separation from life.
-    1. Ezra becomes disarmed.
-        1. He has become infected, but infected with what? He attempts to sacrifice himself for her later, which is something he wouldn't do normally.
-1. Buried warrior
-    1. Both Cee and Ezra are unable to extract the orelac.
-    1. Isn't a prisoner, golden jaws
-    1. Umbilical cord to the green itself.
-    1. Pink represents rawness of his connection to nature. He represents the antithesis of everyone else.
-    1. Does it mean anything that the two people he doesn't kill are the two people who demonstrate that they can't get the gems?
