@@ -1,3 +1,8 @@
+---
+layout: plain_page
+title: Broomshakalaka
+---
+
 Mark, Eileen, Denny Boffa, Jenny Boffa
 * end basketball games or *marriages* with similar ease
 * murdered parents and children

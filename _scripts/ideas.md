@@ -1,3 +1,4 @@
+Ideas:
 * Death Stranding
 * The Discovery
 * Go Set a Watchman
@@ -8,4 +9,7 @@
 * Tremors (1990), They're Under the Ground
 * The night land
 * House of leaves
-* Jaws
+* Jaws, It's a man eater
+
+Account names:
+* I wanna talk about...

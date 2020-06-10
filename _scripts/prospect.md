@@ -1,3 +1,8 @@
+---
+layout: plain_page
+title: Prospect
+---
+
 # Prospect: The Importance of Connection
 In the 2018 science fiction film, Prospect, a father and daughter travel to a remote forest moon in search of the precious resource, orelac. Like their 19th century Californian counterparts, the work for these prospectors is dangerous and unregulated, no place for a child. But nevertheless, the father, Damon, brings everything he has to the job site, including his daughter, Cee. Damon's ambition is boundless, and he will sacrifice their safety to make his way up in the world.
 *Clip of the landing failing*
