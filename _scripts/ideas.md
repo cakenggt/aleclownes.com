@@ -19,6 +19,8 @@ Ideas:
     * There Will Be Blood
     * 14 UP
     * The Magicians
+    * Atlas Shrugged
+    * Citizen Kane
 * Darwinia
 * Megamind: How megamind is really a hero but must perform as a villain. Also about finding your true calling instead of letting a role be forced onto you.
 
