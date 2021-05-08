@@ -1,7 +1,6 @@
 ---
 layout: md_page
 title: Javascript Chains
-comments: true
 ---
 # Javascript Chains Part 2: Scope Chain
 

@@ -1,7 +1,6 @@
 ---
 layout: md_page
 title: Modding while Mining
-comments: true
 ---
 # Modding while Mining: A comparison between two modding platforms for voxel games
 

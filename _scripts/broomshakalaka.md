@@ -1,7 +1,6 @@
 ---
 layout: plain_page
 title: Broomshakalaka
-comments: true
 ---
 
 Mark, Eileen, Denny Boffa, Jenny Boffa

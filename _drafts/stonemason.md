@@ -1,7 +1,6 @@
 ---
 layout: md_page
 title: Test Post
-comments: true
 ---
 # Stonemason and generating microservice stubs
 

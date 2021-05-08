@@ -1,7 +1,6 @@
 ---
 layout: md_page
 title: Redux Listener Pattern
-comments: true
 ---
 # What React-Redux Is Good At
 

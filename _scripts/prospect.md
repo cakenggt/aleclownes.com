@@ -1,7 +1,6 @@
 ---
 layout: plain_page
 title: Prospect
-comments: true
 ---
 
 # Prospect: The Importance of Connection
