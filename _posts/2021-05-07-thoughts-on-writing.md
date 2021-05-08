@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Thoughts on Writing
+comments: true
 ---
 
 In November of 2020, I forget which day exactly, but I read a post on HackerNews that talked about reaching your goals. This is pretty plain fare for HackerNews, it seems like every week you'll find a post about how to better yourself, increase your memory, learn faster, sometimes even type faster. This particular post was talking about how to break out of linear progression to achieve *exponential* progression. The jist of what it was saying was that you should imagine something you want to do, but don't stop there. You have to imagine an endpoint that's so far out that you have no idea how to get there. That, at least to the author of the article, is how you get true *exponential* progression.

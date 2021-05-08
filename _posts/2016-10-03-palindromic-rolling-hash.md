@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Palindromic Rolling Hash
+comments: true
 ---
 In the world of interview algorithms, interviewees often come across a problem similar to the following:
 

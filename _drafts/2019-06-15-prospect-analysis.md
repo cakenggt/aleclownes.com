@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Analysis of the film Prospect (2018)
+comments: true
 ---
 
 # Let's Do Film Analysis

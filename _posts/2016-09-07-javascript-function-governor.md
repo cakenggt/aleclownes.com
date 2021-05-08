@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: JavaScript Function Governor
+comments: true
 ---
 The single-threaded nature of JavaScript often takes the language out of the running for the types of computations that take a significant amount of time. While there are workarounds for both the browser and NodeJs to run scripts asynchronously, ([Web Workers](http://www.w3schools.com/html/html5_webworkers.asp) for the browser), these can prove overkill for some problems.
 

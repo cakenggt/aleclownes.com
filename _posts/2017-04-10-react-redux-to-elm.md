@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Moving from React-Redux to Elm
+comments: true
 ---
 ## Moving from React-Redux to Elm
 

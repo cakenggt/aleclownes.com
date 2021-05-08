@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: ES6 Set Performance in Chrome's V8 JavaScript Engine
+comments: true
 ---
 <script>
 var NaiveSet = function(){

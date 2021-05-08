@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Dynamic Archived Web Services in IPFS
+comments: true
 ---
 In this article I will be detailing how I created a web service in IPFS that had both the ability to be updated with new data and the ability to be archived forever. Additionally, I will be talking about why I took it down. The repository for the front-end (which was archived in IPFS) is [here](https://github.com/cakenggt/ipfs-foundation-frontend) and the repository for the backend (which was hosted on Heroku) is [here](https://github.com/cakenggt/ipfs-foundation-backend).
 

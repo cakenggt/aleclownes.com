@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Using CSS to create a CRT
+comments: true
 ---
 <link rel="stylesheet" type="text/css" href="/css/crt.css">
 

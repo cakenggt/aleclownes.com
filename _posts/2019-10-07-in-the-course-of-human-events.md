@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: In The Course Of Human Events
+comments: true
 ---
 I made a game, you can play it by clicking the cover below.
 

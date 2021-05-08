@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: ! 'Coding with Ada: Programming Babbage''s Analytical Engine'
+comments: true
 ---
 ## What is The Analytical Engine
 

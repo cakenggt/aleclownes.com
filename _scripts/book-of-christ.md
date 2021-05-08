@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Book of Christ
+comments: true
 ---
 
 Notes:

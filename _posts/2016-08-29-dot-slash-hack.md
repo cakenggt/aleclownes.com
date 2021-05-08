@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Dot Slash Hack
+comments: true
 ---
 [Dot Slash Hack](https://dotslashhack.herokuapp.com) (aka ./#) is a MMORPG where players have the ability to write their own spells in JavaScript. It was envisioned to persuade players to learn programming in order to have greater control in the game, something which I had seen happen with players in Minecraft, who memorize many crafting recipes throughout their play-time.
 

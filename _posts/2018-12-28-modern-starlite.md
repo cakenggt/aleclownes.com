@@ -1,6 +1,7 @@
 ---
 layout: plain_page
 title: Modern Starlite
+comments: true
 ---
 ## What is Starlite?
 
