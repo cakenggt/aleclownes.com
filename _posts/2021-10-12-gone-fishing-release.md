@@ -12,5 +12,6 @@ For Jake and his group of friends, the languid summer between fifth and sixth gr
 
 ## Links
 
-[epub](/books/gone-fishing/Gone Fishing - Alec Lownes.epub)<br/>
+[epub](/books/gone-fishing/Gone Fishing - Alec Lownes.epub)
+
 [pdf](/books/gone-fishing/Gone Fishing - Alec Lownes.pdf)
