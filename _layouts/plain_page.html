@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:400,700" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/js/ga.js"></script>
+    <script>
+      // download tracking
+      $('a').filter(function(){
+        return $(this).attr("href").match(/\.(pdf|doc|docx|ppt|pptx|xls|slxs|epub|odp|ods|txt|rtf)$/i);
+      }).attr('target', '_blank').click(function(e){window.ga('send', 'event', 'File', 'Download', $(this).attr('href').match(/[^/]+$/)[0]);});
+    </script>
   </head>
   <body>
     <h1>{{ page.title }}</h1>
@@ -19,10 +25,6 @@
     <div id="disqus_thread"></div>
     {% if page.comments %}
     <script>
-      // download tracking
-      $('a').filter(function(){
-        return $(this).attr("href").match(/\.(pdf|doc|docx|ppt|pptx|xls|slxs|epub|odp|ods|txt|rtf)$/i);
-      }).attr('target', '_blank').click(function(e){window.ga('send', 'event', 'File', 'Download', $(this).attr('href').match(/[^/]+$/)[0]);});
       /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
