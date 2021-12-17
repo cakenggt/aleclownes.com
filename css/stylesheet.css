@@ -146,6 +146,7 @@ main {
   flex: 1 1 auto;
   max-width: 800px;
   padding: 4em 2em;
+  margin: 0 auto;
 }
 
 footer {
