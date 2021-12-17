@@ -1,12 +1,13 @@
 body {
-  max-width: 800px;
   font-size: 21px;
   margin: 0 auto;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
-  padding: 4em 2em;
   color: #313131;
   line-height: 1.4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 body::-webkit-scrollbar {
   width: 6px;
@@ -132,8 +133,46 @@ iframe {
   }
 }
 @media (max-width: 750px) {
-  body {
+  main {
     padding: 2em;
+    
+  }
+  body {
     font-size: 17px;
   }
+}
+
+main {
+  flex: 1 1 auto;
+  max-width: 800px;
+  padding: 4em 2em;
+}
+
+footer {
+  flex: 0 0 auto;
+  padding: 1em 2em;
+  border-top: 1px solid black;
+}
+
+.subscribe-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brandingLogo {
+  max-width: 160px;
+}
+
+.subscribe-button {
+  background-color: white;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.subscribe-button:active {
+  filter: invert(1);
+}
+
+.subscribe-cta {
+  margin: 5px 0;
 }
