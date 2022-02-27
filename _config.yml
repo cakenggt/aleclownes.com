@@ -5,5 +5,5 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 markdown: kramdown
 highlighter: rouge
 
-gems:
+plugins:
   - jekyll-feed
