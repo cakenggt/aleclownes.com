@@ -177,3 +177,12 @@ footer {
 .subscribe-cta {
   margin: 5px 0;
 }
+
+.book-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-cover {
+  flex: 0 0 100px;
+}
