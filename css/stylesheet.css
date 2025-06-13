@@ -182,12 +182,9 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .book-cover {
   flex: 0 0 100px;
-}
-
-.book-cover:not(:first-child) {
-  padding-right: 20px
 }
