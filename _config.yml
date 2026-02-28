@@ -6,7 +6,8 @@ markdown: kramdown
 highlighter: rouge
 
 collections:
-  - stories
+  stories:
+    output: true
 
 plugins:
   - jekyll-feed
