@@ -1,7 +1,6 @@
 ---
 layout: plain_page
 title: I Used To Be a Park
-comments: true
 ---
 
 I used to be a park, and I have seen many things.
@@ -22,7 +21,7 @@ But the towers around me grew taller, and eventually they crowded out the sun. T
 
 There was still the winter, when they would come on their saucers and sleds and fly as fast as they ever could, save only in their dreams. The delightful winters lasted for a while longer, even when no one came in the summer. That was fine; the chipmunks returned, and now, pigeons.
 
-But the buildings grew taller again, and more crowded, and I felt myself slip away from world. I hadn’t realized that I’d become a park, instead of a piece of the Earth, but now no one remembered me as such. I was only an empty lot, and all life had abandoned me. My hold on the rest of the world grew thin and tired, and I felt the void swallowing me whole.
+But the buildings grew taller again, and more crowded, and I felt myself slip away from the world. I hadn’t realized that I’d become a park, instead of a piece of the Earth, but now no one remembered me as such. I was only an empty lot, and all life had abandoned me. My hold on the rest of the world grew thin and tired, and I felt the void swallowing me whole.
 
 That’s when you found me. That’s when you woke me, with your magics and your potions. When I took my first shuddering breath and the ground heaved, I was given a reprieve, though not for long. In the end, we all slip out of memory. I suppose I am lucky that I’m not trapped beneath one of the glass and metal monstrosities. That I can die in peace.
 
@@ -84,7 +83,7 @@ I am grounded again, and the soil here is rich. I send my roots out, seeking pur
 
 I used to be a park, and I know many things. May I teach them to you?
 
-“I would like that very much,” you say, and I feel both excitement and dread in your soul. I know where we are going now, and I do not begrudge you your vengeance. I would have it on those concrete monstrosities, but alas, I am too weak.
+“I would like that very much,” you say. There is both excitement and dread in your soul. I know where we are going now, and I do not begrudge you your vengeance. I would have it on those concrete monstrosities, but alas, I am too weak.
 
 After all, I only used to be a park.
 
