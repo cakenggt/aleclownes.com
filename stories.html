@@ -1,0 +1,12 @@
+
+---
+layout: plain_page
+title: Stories
+---
+<ul class="clear-list no-padding-list">
+{% for post in site.stories %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+<br>
+<a href="/">Back to Home</a>
