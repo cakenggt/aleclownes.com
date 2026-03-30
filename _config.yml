@@ -9,5 +9,10 @@ collections:
   stories:
     output: true
 
+feed:
+  collections:
+    stories:
+      path: "/stories/feed.atom"
+
 plugins:
   - jekyll-feed
