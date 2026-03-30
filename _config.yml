@@ -12,7 +12,7 @@ collections:
 feed:
   collections:
     stories:
-      path: "/stories/feed.atom"
+      path: "/stories/feed.xml"
 
 plugins:
   - jekyll-feed
